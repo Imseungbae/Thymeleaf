@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h1>오퍼레이션</h1>
+
+    <li>
+        <h3>기본연산</h3>
+            <li>10+2 = <span th:text="10+2"></span></li>
+            <li>10%2==0 <span th:text="10%2==0"> </span></li>
+        <h3>비교연산</h3>
+        <li>10 > 2 = <span th:text="10>2"></span> </li>
+        <li>10 gt 2 = <span th:text="10 gt 2"></span> </li>
+        <li>10 lt 5 = <span th:text="10 lt 5"></span> </li>
+    <li> <span th:text="10%2==0 ? '짝수':'홀수'"></span></li>
+    <li> 엘비스연산 <span th:text="${nullData}?: '데이터가 없다'"></span> </li>
+    <li> no opreation = <span th:text="${nullData}?: _"> nothing</span></li>
+    </li>
+</body>
+</html>

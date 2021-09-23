@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>기본식 객체</h1>
+
+<ul>
+    <li>request = <span th:text="${#request}"></span> </li>
+    <li>response = <span th:text="${#response}"></span></li>
+    <li>session = <span th:text="${#session}"></span></li>
+    <li>servletContext = <span th:text="${#servletContext}"></span></li>
+    <li>locale = <span th:text="${#locale}"></span></li>
+</ul>
+
+<!-- 타임리프는 편의성을위해 편의객체를 지원해준다. 파라미터,세션,빈등을 편의접근되도록 지원해준다.-->
+<h1>편의 객체</h1>
+<ul>
+    <li>Request Parameter = <span th:text="${param.paramData}"></span> </li>
+    <li>session = <span th:text="${session}"></span> </li>
+    <!--스프링빈에 직접 접근-->
+    <li>spring bean = <span th:text="${@helloBean.hello('spring')}"></span> </li>
+</ul>
+</body>
+</html>
